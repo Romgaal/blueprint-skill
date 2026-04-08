@@ -1,0 +1,20 @@
+{
+  "name": "blueprint-skill",
+  "description": "Blueprint Skill — CDC planning, disciplined execution, challenge-first thinking, proof-based verification. Battle-tested on 5+ production projects.",
+  "owner": {
+    "name": "Romain Gal",
+    "email": "ro@romaingal.com"
+  },
+  "plugins": [
+    {
+      "name": "blueprint-skill",
+      "description": "Blueprint planning, disciplined execution, challenge-first thinking, and proof-based verification",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "Romain Gal",
+        "email": "ro@romaingal.com"
+      }
+    }
+  ]
+}
