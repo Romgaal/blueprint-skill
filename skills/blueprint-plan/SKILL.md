@@ -22,6 +22,14 @@ description: "You MUST use this before any non-trivial implementation. Produces 
 
 ## Le process
 
+### Phase 0 — Capture des requirements (CRITIQUE)
+
+**Ecrire les MOTS EXACTS de l'utilisateur.** Pas un resume. Pas une reformulation. Ses mots, verbatim.
+
+Pourquoi : la compaction de conversation DETRUIT tout ce qui n'est pas ecrit dans un fichier. Si tu resumes en 3 lignes une description detaillee, les details sont PERDUS a jamais. C'est arrive. Ca ne doit plus arriver.
+
+Creer ou mettre a jour : `docs/requirements/[feature-name].md` avec la description complete de l'utilisateur.
+
 ### Phase 1 — Analyse (OBLIGATOIRE)
 
 Avant d'ecrire le moindre plan :
