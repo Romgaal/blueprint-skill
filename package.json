@@ -1,5 +1,5 @@
 {
   "name": "blueprint-skill",
-  "version": "1.0.0",
-  "description": "Blueprint Skill — CDC planning, disciplined execution, proof-based verification"
+  "version": "1.1.0",
+  "description": "Blueprint Skill — ambiguity-first planning (CDC), challenge-driven choices, disciplined execution, proof-based verification, and crash-test auditing. A way of thinking, portable to any project. Battle-tested on 5+ production projects."
 }

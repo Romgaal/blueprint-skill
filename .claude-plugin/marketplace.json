@@ -1,6 +1,6 @@
 {
   "name": "blueprint-skill",
-  "description": "Blueprint Skill — CDC planning, disciplined execution, challenge-first thinking, proof-based verification. Battle-tested on 5+ production projects.",
+  "description": "Blueprint Skill — ambiguity-first planning (CDC), challenge-driven choices, disciplined execution, proof-based verification, and crash-test auditing. A way of thinking, portable to any project. Battle-tested on 5+ production projects.",
   "owner": {
     "name": "Romain Gal",
     "email": "ro@romaingal.com"
@@ -8,8 +8,8 @@
   "plugins": [
     {
       "name": "blueprint-skill",
-      "description": "Blueprint planning, disciplined execution, challenge-first thinking, and proof-based verification",
-      "version": "1.0.0",
+      "description": "Ambiguity-first blueprint planning, challenge-first thinking, mechanical execution, proof-based verification, crash-test auditing",
+      "version": "1.1.0",
       "source": "./",
       "author": {
         "name": "Romain Gal",
