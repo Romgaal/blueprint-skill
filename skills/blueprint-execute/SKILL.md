@@ -1,6 +1,6 @@
 ---
 name: blueprint-execute
-description: "Execute a blueprint mechanically, step by step. No improvisation. No deviation. Follow the plan exactly. Verify at each step. Report when complete."
+description: "Executes an EXISTING, validated blueprint (produced by blueprint-plan) mechanically, step by step: verifies each step, reports any deviation, no improvisation and no bonus code. Use only once a blueprint exists and the user has validated it. Do NOT use to write the plan (that is blueprint-plan) nor to improvise a task without a plan."
 ---
 
 # Blueprint Execute

@@ -31,6 +31,27 @@ Verifier :
 - [ ] Le build passe
 - [ ] Aucun `console.log` de debug restant
 
+### 3bis. Qualite du PLAN lui-meme (pas seulement de l'execution)
+
+> Le principe fondateur dit : *"si un junior echoue a executer ton plan, c'est que le plan etait mauvais"*.
+> Donc quand l'execution devie, la vraie question n'est pas seulement "qui a merde ?" mais
+> **"qu'est-ce que le plan aurait du dire ?"**.
+
+Pour CHAQUE ecart constate, trancher la cause :
+- [ ] **Faute d'execution** — l'etape etait claire et complete, elle n'a pas ete suivie
+- [ ] **Faute de PLAN** — l'etape etait ambigue, incomplete, ou reposait sur une supposition
+
+Puis, meme si l'execution est parfaite :
+- [ ] Une etape a-t-elle oblige l'executant a DEVINER quoi que ce soit ?
+- [ ] Le blueprint contenait-il "je suppose", "probablement", ou une inconnue non levee ?
+- [ ] Le **critere de succes global** etait-il present, et prouvable par une commande ?
+- [ ] Des decisions ont-elles ete tranchees PENDANT l'execution alors qu'elles auraient du l'etre en Phase 0.5 ?
+
+**Toute "faute de PLAN" identifiee → l'ajouter dans `references/gotchas.md`**
+(le piege + la date + ce qu'il aurait fallu ecrire). C'est le seul mecanisme qui fait progresser la
+methode au lieu de repeter les memes trous. Un review qui ne remonte jamais de faute de plan sur un
+projet qui a devie n'a pas fait son travail.
+
 ### 4. Rapport
 
 Categoriser les problemes :
@@ -43,11 +64,15 @@ Format :
 REVIEW BLUEPRINT : [nom]
 - Etapes prevues : [N]
 - Etapes completees : [N]
-- Ecarts detectes : [N]
+- Ecarts detectes : [N]  (dont fautes de PLAN : [N])
 
 CRITIQUES : [liste]
 IMPORTANTS : [liste]
 SUGGESTIONS : [liste]
+
+QUALITE DU PLAN : [SOLIDE / A CORRIGER]
+- Fautes de plan : [liste — etapes ambigues, suppositions, decisions non tranchees en amont]
+- Gotchas a ajouter dans references/gotchas.md : [liste]
 
 VERDICT : [APPROVED / CHANGES NEEDED]
 ```

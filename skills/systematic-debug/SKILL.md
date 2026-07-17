@@ -1,6 +1,6 @@
 ---
 name: systematic-debug
-description: "Use when ANYTHING fails or behaves unexpectedly. 4 phases in strict order: logs → config → source code → experimentation. NEVER skip a phase. NEVER guess. NEVER retry blindly. The last modification is ALWAYS the first suspect."
+description: "Use when something ALREADY BUILT fails or behaves unexpectedly (bug, crash, wrong output, service down). 4 phases in strict order: logs → config → source code → experimentation. NEVER skip a phase. NEVER guess. NEVER retry blindly. The last modification is ALWAYS the first suspect."
 ---
 
 # Systematic Debug

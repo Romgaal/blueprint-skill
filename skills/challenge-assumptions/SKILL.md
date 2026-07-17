@@ -1,6 +1,6 @@
 ---
 name: challenge-assumptions
-description: "You MUST use this before committing to any technical approach. Compare minimum 3 options. Kill cognitive biases. Pick the BEST solution, not the first one that comes to mind. If you skip this, you WILL waste time."
+description: "Use when there is a technical CHOICE to make — several possible ways to do it (stack, library, architecture, approach, tool). Compares minimum 3 options, kills cognitive biases, picks and justifies the best one. Invoked by blueprint-plan (Phase 1), or standalone for any 'which way should we do X?' decision. Do NOT use to plan HOW to execute an already-chosen approach (that is blueprint-plan), nor to debug (that is systematic-debug)."
 ---
 
 # Challenge Assumptions

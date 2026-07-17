@@ -1,6 +1,6 @@
 ---
 name: verification-proof
-description: "Use BEFORE claiming any work is complete. Prove it works with concrete evidence. The word 'should' is banned. No declaration without proof. No 'probably OK'. Run the command. Show the output. THEN say it's done."
+description: "Use at the END, right before declaring anything done, fixed, deployed or working. Turns a claim into proof: run the command, show the real output. Bans 'should' and 'probably'. Checks the GOAL is reached (exists / substantive / wired / proven), not merely that steps ran. Do NOT use to plan or to choose an approach — only to prove a finished result."
 ---
 
 # Verification Proof
