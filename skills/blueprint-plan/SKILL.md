@@ -76,7 +76,7 @@ Ce qu'on garde en sortie, pour le blueprint :
 - **Approche choisie** + justification en 2-3 phrases
 - **Approches rejetees** + raison du rejet
 
-> **REGLE DE FER : Si Romain doit te suggerer la bonne solution, c'est que t'as merde.**
+> **REGLE DE FER : Si l'utilisateur doit te suggerer la bonne solution, c'est que t'as merde.**
 > C'est TON job de trouver la meilleure approche en amont.
 
 ### Phase 2 — Blueprint (le CDC)
