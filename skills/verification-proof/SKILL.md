@@ -10,6 +10,8 @@ description: "Use BEFORE claiming any work is complete. Prove it works with conc
 > **Aucune declaration de completion sans PREUVE de verification fraiche.**
 > Le mot "devrait" est un red flag. Si tu dis "ca devrait marcher", c'est que t'as PAS verifie.
 
+**Le test ultime de qualite** : *"Est-ce qu'un staff engineer validerait ca ?"* Si la reponse n'est pas un OUI franc, le travail n'est pas fini.
+
 **Announce at start:** "Je verifie avec preuves avant de declarer que c'est fait."
 
 ## La Loi d'Airain

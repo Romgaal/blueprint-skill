@@ -10,6 +10,8 @@ description: "You MUST use this before committing to any technical approach. Com
 > **Ne jamais choisir une techno par habitude. Comparer minimum 3 options.**
 > La premiere idee est rarement la meilleure. La bonne solution est celle que tu trouves APRES avoir challenge tes propres biais.
 
+**Si tu trouves encore quelque chose en relisant ton analyse, c'est que tu n'as pas assez creuse avant.** Continue jusqu'a ce qu'une nouvelle relecture ne fasse plus emerger de nouvelle option ou de nouveau biais.
+
 **Announce at start:** "Je challenge les approches avant de choisir."
 
 ## Quand utiliser

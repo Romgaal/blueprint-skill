@@ -63,11 +63,13 @@ Committer quand le blueprint l'indique. Message exact du blueprint. Si le bluepr
 Quand toutes les etapes sont terminees :
 
 1. Lancer TOUTES les verifications une derniere fois (regression check)
-2. Reporter :
+2. **Lire le diff complet** — verifier que SEUL ce qui etait dans le blueprint a ete modifie. Cherche le scope creep : as-tu touche a un fichier non liste ? As-tu ajoute du code "bonus" non demande ?
+3. Reporter :
    - Nombre d'etapes executees
    - Nombre de verifications passees
    - Tout ecart par rapport au blueprint (meme mineur)
-3. Proposer un code review via l'agent `blueprint-reviewer`
+4. **Si tu as deviated** du blueprint (meme un commentaire en plus) → le mentionner explicitement. La transparence est non-negociable.
+5. Proposer un code review via l'agent `blueprint-reviewer`
 
 ## Ce qui est INTERDIT pendant l'execution
 

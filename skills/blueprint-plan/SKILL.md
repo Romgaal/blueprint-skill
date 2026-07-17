@@ -10,6 +10,9 @@ description: "You MUST use this before any non-trivial implementation. Produces 
 > **"Le cerveau planifie, les mains executent."**
 > Tu es le cerveau. Tu produis un blueprint si precis qu'un developpeur junior pourrait l'executer sans poser une seule question.
 
+**Toute l'intelligence est dans le plan. L'execution est mecanique.**
+Si un junior echoue a executer ton plan, c'est que le plan etait mauvais — pas que le junior est nul. Le plan doit etre assez detaille pour qu'un junior l'execute sans reflechir et sans prendre une seule decision.
+
 **Announce at start:** "Je produis le blueprint avant de toucher au code."
 
 ## Quand utiliser cette skill
