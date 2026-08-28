@@ -57,3 +57,42 @@ casse un reglage volontaire.
 Zero erreur d'execution, resultat inutile.
 **Lecon** : la precision du plan ne rattrape JAMAIS un objectif faux. C'est le seul defaut qu'aucune
 phase suivante ne rattrape. → Phase 0.5, volet 1.
+
+## 10. L'ancre textuelle ne vit pas dans la fonction annoncee (2026-08-26)
+**Vecu** : blueprint sept-findings, etape 2.3 ancre 3 — libelle « rattachement (fin de `rattacher()`) »,
+mais l'ancre textuelle (`return {"ok": True, "vid": cur.lastrowid}`) vivait dans `creer_variante()`,
+qui ne rattache rien. L'execution mecanique a suivi l'ancre : invalidation posee au mauvais endroit,
+commentaire faux dans le code, vrais points de rattachement non couverts (rattrapes par un filtre
+live au service — par construction, pas par intention).
+**Lecon** : au plan, verifier pour CHAQUE ancre (grep -n) qu'elle est bien DANS la fonction que le
+libelle annonce. A l'execution : libelle et ancre divergents = STOP et rapport, jamais application
+silencieuse de l'un des deux.
+
+## 11. Mutation manuelle a taille constante = __pycache__ empoisonne (2026-08-26)
+**Vecu** : protocole « muter `POIDS .32→.99`, pytest doit echouer, restaurer en finally ». La mutation
+garde la MEME taille de fichier et la restauration tombe dans la MEME seconde → le .pyc compile pendant
+la mutation reste valide aux yeux de Python (validation mtime seconde + taille). Reproduit en review :
+pytest 4 failed sur source PROPRE, API dev servant des scores faux (x100 sans redistribution), alors
+que `git diff` etait vide.
+**Lecon** : tout protocole de mutation Python purge `__pycache__` en finally OU tourne avec
+`PYTHONDONTWRITEBYTECODE=1`. `git diff` vide ne prouve pas l'etat reel : le bytecode n'est pas dans git.
+
+## 12. Amender un chiffre a UN endroit quand il vit a TROIS (2026-08-26)
+**Vecu** : seuil F5 amende 450→500 Ko dans la verification dev, laisse a « < 450 000 » dans le point
+de deploiement ET le critere de succes global. La prod sert 488 561 octets : le critere global etait
+infaisable tel qu'ecrit (et le gzip cense compenser n'etait pas actif). Meme classe : la note « la base
+de tests n'a pas de table posts » (1.2) et « le script du blueprint initial » (4.1) referencent des
+etats supprimes par leurs propres amendements.
+**Lecon** : un amendement = grep de la valeur/du texte dans TOUT le document, chaque occurrence
+tranchee explicitement. Un critere de succes global qui depend d'un seuil amende se re-derive, il ne
+se laisse pas en l'etat.
+
+## 13. Specifier du concurrent sans derouler le « pendant » (2026-08-26)
+**Vecu** : le code du blueprint (F2, cache pre-calcule) ecrit `quand=now` en fin de calcul sans
+regarder si une invalidation est arrivee PENDANT les ~5 s du calcul : un detachement pendant un
+recalcul est ecrase et le reel disparait des propositions jusqu'a la collecte suivante (jusqu'a 3 h).
+Meme classe : pendant le tout premier calcul (synchrone), une 2e requete sert une liste vide au lieu
+d'attendre. La course etait dans le code SPECIFIE par le plan — l'execution etait conforme.
+**Lecon** : tout plan qui specifie cache + invalidation + thread deroule explicitement le scenario
+« evenement pendant le calcul » : jeton d'epoque lu avant le calcul et compare avant d'ecrire, ou
+re-verification de l'invalidation en fin de calcul.
