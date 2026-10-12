@@ -96,3 +96,15 @@ d'attendre. La course etait dans le code SPECIFIE par le plan — l'execution et
 **Lecon** : tout plan qui specifie cache + invalidation + thread deroule explicitement le scenario
 « evenement pendant le calcul » : jeton d'epoque lu avant le calcul et compare avant d'ecrire, ou
 re-verification de l'invalidation en fin de calcul.
+
+## 2026-09-03 — Une règle de langue en liste noire se calibre avec la classe NÉGATION
+**Piège** : l'étape de calibrage d'un filtre « registre fataliste » ne testait que 5 phrases à épargner, aucune négation des verbes visés — or le prompt impose lui-même ce registre négatif au closing (« un miroir, pas un destin »). En prod : 16 négations du canon sur 18 accusées, la phrase éthique excisée, 12 formes fatalistes sur 17 passées.
+**Ce qu'il aurait fallu faire** : calibrer contre le VALIDATEUR entier avec trois jeux — les formes à attraper, les NÉGATIONS de ces mêmes formes, les paraphrases de la copie que le prompt impose — et faire de ce calibrage le test.
+
+## 2026-09-03 — Avant d'AFFICHER un champ serveur comme un fait, lire son producteur
+**Piège** : le plan promouvait `time_ambiguous` au rang d'aveu affiché sans lire `timezone.py` : la valeur vivait dans un global de module, écrit dans une fonction et lu après coup dans une autre — sous threads, 2 aveux échangés sur 1 200, puis figés 7 jours par le cache.
+**Ce qu'il aurait fallu faire** : « lire tout le code touché » inclut la SOURCE d'un champ qu'on va servir ; un global de module n'est pas une valeur par requête ; prouver en threads avant de promouvoir.
+
+## 2026-09-03 — Un comportement de flux HTTP se prouve sur uvicorn, pas sur TestClient
+**Piège** : le plan prescrivait un test « corps chunked coupé dès le dépassement » via `TestClient`, qui livre un générateur en UN seul message `http.request` : le test ne pouvait pas rougir sur ce point.
+**Ce qu'il aurait fallu faire** : tester le middleware directement (plusieurs messages `more_body`) ou sur un uvicorn transitoire ; nommer le test pour ce qu'il prouve.
