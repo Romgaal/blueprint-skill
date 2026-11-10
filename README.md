@@ -27,7 +27,7 @@ claude plugin install blueprint-skill@romain-methods
 ## The workflow
 
 ```
-  crash-test            audit an existing thing → findings + 3 solutions each
+  crash-test            scoped audit → evidence + 3 options + attempted refutation
       ↓
   /blueprint
       ├── blueprint-plan
@@ -49,7 +49,7 @@ claude plugin install blueprint-skill@romain-methods
 | **blueprint-execute** | A validated blueprint exists. Execute it mechanically, report every deviation. |
 | **verification-proof** | About to claim something is done. Turn the claim into proof — run it, show the output. |
 | **systematic-debug** | Something already built **fails**. 4 phases: logs → config → source → experiment. Never guess. |
-| **crash-test** | Audit an **existing** product/UI/system: frictions, UX, security, perf, debt → 3 distinct solutions per finding. |
+| **crash-test** | Audit an **existing** product/UI/system: scope the evidence, separate facts/risks/opportunities/unknowns, compare 3 distinct solutions per retained problem, challenge conclusions, and define observable success criteria for the blueprint. |
 
 ## Agents
 
